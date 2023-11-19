@@ -1,0 +1,13 @@
+{
+    "files": {
+        "README.md": "965012806ad7acf9ad4b81d58537a71e934d362c31becf538251fa5d45c3302b",
+        "blacklist.json": {
+            "overwrite": false,
+            "hash": "a8da4051192bb4ae65a6f28be7afc99db393ca207486aca0f0fa28d344511442"
+        },
+        "defs/C_PUT_WARE_ITEM.3.def": "14e81c44e0a046bd803d8b9f6dc45daf53789f209f70ebd949f90651b4f07f51",
+        "defs/S_VIEW_WARE_EX.2.def": "6065ae099533f68e0b31f1a625ee9659f35cf91c5f76e631496756bb24dc1a0b",
+        "index.js": "1e2a62a1835b76eab1683ee3b2b59be136b327dffe8a07e2d0c3e4998929e02a",
+        "module.json": "4476c16f49dc18a44993f2582383b08cd8e3f2bb22692f6b8192a015b7f33ba9"
+    }
+}

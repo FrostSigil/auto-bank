@@ -1,0 +1,13 @@
+{
+    "disableAutoUpdate": false,
+    "name": "Auto-Bank",
+    "author": "",
+    "description": "A script that auto merges inventory items to bank if same item exists in bank/special storage/wardrobe/etc's tab.",
+    "options": {
+        "niceName": "AutoBank",
+        "guiName": "Auto Bank",
+        "reloadable": true
+    },
+    "servers": ["https://raw.githubusercontent.com/FrostSigil/auto-bank/master/"],
+    "conflicts": ["auto-banker"]
+}
