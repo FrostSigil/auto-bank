@@ -106,7 +106,7 @@ module.exports = function AutoBank(mod) {
 			resetValues();
 		}
 	}
-	// function sSytemMessage(event) { if (Enabled && mod.parseSystemMessage(event.message).id === 'SMT_WAREHOUSE_FULL') return false }
+	function sSytemMessage(event) { if (Enabled && mod.parseSystemMessage(event.message).id === 'SMT_CANNOT_USERWAREHOUSE_NO_UPGRADE') { resetValues(); } return false }
 
 	// ~~~ * Hooks * ~~~ \\
 
@@ -114,7 +114,7 @@ module.exports = function AutoBank(mod) {
 	mod.hook("C_PUT_WARE_ITEM", 3, cPutWareItem);
 	mod.hook("S_REQUEST_CONTRACT", 1, sRequestContract);
 	mod.hook("S_CANCEL_CONTRACT", 1, sCancelContract);
-	// mod.hook('S_SYSTEM_MESSAGE', 1, sSytemMessage)
+	mod.hook('S_SYSTEM_MESSAGE', 1, sSytemMessage)
 
 	// ~~~ * Helper Functions * ~~~ \\
 
@@ -189,7 +189,7 @@ module.exports = function AutoBank(mod) {
 				else Msg("Over 50 items; won't be listed to prevent spam.");
 			}
 			if (Enabled && BankPet) {
-				Msg("Auto Banking is <font color=\"#FE6F5E\">disabled</font>.");
+				Msg("Auto Banking <font color=\"#FE6F5E\">Finished</font>.");
 				Enabled = false; BankPet = false;
 				QueuedDups.clear();
 				AllCurBankItems.clear();
@@ -201,7 +201,7 @@ module.exports = function AutoBank(mod) {
 				AllCurBankItems.clear();
 				lastBankedPageOffset = -1;
 				npc(26, 9);
-				Msg("Auto Banking <font color=\"#4DE19C\">PET bank</font>.");
+				Msg("Auto Banking: <font color=\"#fc6d00\">Check PET bank</font>.");
 			}
 		},
 		saveBlacklistFile = () => fs.writeFileSync(fn, JSON.stringify(sortStrNum(blacklist)), err => { ReadFile(); if (err) console.log(err); }),
@@ -288,7 +288,8 @@ module.exports = function AutoBank(mod) {
 				if (!Enabled) {
 					Enabled = true; BankPet = false;
 					npc(26, 1);
-					Msg("Auto Banking is <font color=\"#4DE19C\">enabled</font>.");
+					Msg("Auto Banking <font color=\"#4DE19C\">Start</font>.");
+					Msg("Auto Banking: <font color=\"#fc6d00\">Check bank</font>.");
 				} else resetValues();
 				break;
 		}
