@@ -189,7 +189,7 @@ module.exports = function AutoBank(mod) {
 				else Msg("Over 50 items; won't be listed to prevent spam.");
 			}
 			if (Enabled && BankPet) {
-				Msg("Auto Banking <font color=\"#FE6F5E\">Finished</font>.");
+				Msg("<font color=\"#FE6F5E\">Finished</font>.");
 				Enabled = false; BankPet = false;
 				QueuedDups.clear();
 				AllCurBankItems.clear();
@@ -201,7 +201,7 @@ module.exports = function AutoBank(mod) {
 				AllCurBankItems.clear();
 				lastBankedPageOffset = -1;
 				npc(26, 9);
-				Msg("Auto Banking: <font color=\"#fc6d00\">Check PET bank</font>.");
+				Msg("<font color=\"#fc6d00\">Check PET bank</font>.");
 			}
 		},
 		saveBlacklistFile = () => fs.writeFileSync(fn, JSON.stringify(sortStrNum(blacklist)), err => { ReadFile(); if (err) console.log(err); }),
@@ -288,8 +288,8 @@ module.exports = function AutoBank(mod) {
 				if (!Enabled) {
 					Enabled = true; BankPet = false;
 					npc(26, 1);
-					Msg("Auto Banking <font color=\"#4DE19C\">Start</font>.");
-					Msg("Auto Banking: <font color=\"#fc6d00\">Check bank</font>.");
+					Msg("<font color=\"#4DE19C\">Start</font>.");
+					Msg("<font color=\"#fc6d00\">Check bank</font>.");
 				} else resetValues();
 				break;
 		}
