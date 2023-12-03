@@ -106,7 +106,7 @@ module.exports = function AutoBank(mod) {
 			resetValues();
 		}
 	}
-	function sSytemMessage(event) { if (Enabled && mod.parseSystemMessage(event.message).id === 'SMT_CANNOT_USERWAREHOUSE_NO_UPGRADE') { resetValues(); } return false }
+	function sSytemMessage(event) { if (Enabled && mod.parseSystemMessage(event.message).id === 'SMT_CANNOT_USERWAREHOUSE_NO_UPGRADE') { resetValues(); } }
 
 	// ~~~ * Hooks * ~~~ \\
 
