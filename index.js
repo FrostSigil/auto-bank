@@ -87,7 +87,7 @@ module.exports = function AutoBank(mod) {
 					type: 26,
 					id: curBankContractId
 				});
-		}, toBankItems.length * 47 + 150);
+		}, toBankItems.length * 47 + 250);
 	}
 	function cPutWareItem({ id }) {
 		if (AddToBl) {
